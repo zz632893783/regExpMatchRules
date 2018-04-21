@@ -128,13 +128,13 @@ let reg = /ab{1,3}b{1,2}bc/;
 ```
 /ab{1,3}b{1,2}bc/     abbbbbc<br/>
 
-a                     a<br/>
-ab{1,3}               ab<br/> (a, b{1,3}分别匹配a, b)
-ab{1,3}               abb<br/> (a, b{1,3}分别匹配a, bb)
-ab{1,3}               abbb<br/> (a, b{1,3}分别匹配a, bbb)
-ab{1,3}b{1,2}         abbbb<br/> (a, b{1,3}, b{1,2}分别匹配a, bbb, b)
-ab{1,3}b{1,2}         abbbbb<br/> (a, b{1,3}, b{1,2}分别匹配a, bbb, bb)
-ab{1,3}b{1,2}b        abbbbbc<br/> (a, b{1,3}, b{1,2}, b分别匹配a, bbb, bb, c, 匹配失败尝试进行回溯)
-ab{1,3}b{1,2}b        abbbbb<br/> (a, b{1,3}, b{1,2}, b分别匹配a, bbb, b, b)
+a                     a
+ab{1,3}               ab (a, b{1,3}分别匹配a, b)
+ab{1,3}               abb (a, b{1,3}分别匹配a, bb)
+ab{1,3}               abbb (a, b{1,3}分别匹配a, bbb)
+ab{1,3}b{1,2}         abbbb (a, b{1,3}, b{1,2}分别匹配a, bbb, b)
+ab{1,3}b{1,2}         abbbbb (a, b{1,3}, b{1,2}分别匹配a, bbb, bb)
+ab{1,3}b{1,2}b        abbbbbc (a, b{1,3}, b{1,2}, b分别匹配a, bbb, bb, c, 匹配失败尝试进行回溯)
+ab{1,3}b{1,2}b        abbbbb (a, b{1,3}, b{1,2}, b分别匹配a, bbb, b, b)
 ab{1,3}b{1,2}bc       abbbbbc (a, b{1,3}, b{1,2}, b, c分别匹配a, bbb, b, b, c)
 ```
